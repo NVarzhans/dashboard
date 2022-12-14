@@ -242,12 +242,12 @@ $query = mysqli_query($dbConnect, $querySelectAll) or die(mysql_error($dbConnect
                 }
 ?>
 
-                            <!-- <img class="picture1" src="./assets/pictures/first-project.png" alt="first-project">  -->
+               
                   
                 <div class="buttons">
                     <div class="buttonthree" class="buttonright"><a href="http://localhost/dashboard/my-blog.php">Explore all posts</a>
                     </div>
-                    <input class="buttonthree" class="buttonright" type="button" value="Post smth" onclick="showModalWinNote()">
+                    <button class="buttonthree" class="buttonright" type="button" id="postNote">Post smth</button> 
                 </div>    
             </section> 
         </main>
@@ -290,7 +290,7 @@ $query = mysqli_query($dbConnect, $querySelectAll) or die(mysql_error($dbConnect
                         <form method="post" action="">
                             <div id="subscribeField">
                                 <label class="labelone">Subscribe to my weekly newsletter </label>
-                                <input type="email" placeholder=" your email" class="form">
+                                <input type="email" placeholder=" your email" class="form" pattern="[^ @]*@[^ @]*">
                                 <button id="subscribe" type="button">Subscribe</button>
                             </div>
                         </form>
@@ -299,7 +299,7 @@ $query = mysqli_query($dbConnect, $querySelectAll) or die(mysql_error($dbConnect
                               <h2> Please leave your feedback </h2>
                                 <div class="fields">                                  
                                     <label class="label">e-mail</label>
-                                    <input id="email" class="field" type="email" placeholder=" email">
+                                    <input id="email" class="field" type="email" placeholder=" email" pattern="[^ @]*@[^ @]*">
                                 </div>
                                 <div class="fields">
                                     <label class="label">full name</label>
@@ -318,31 +318,31 @@ $query = mysqli_query($dbConnect, $querySelectAll) or die(mysql_error($dbConnect
                                     </div>
                                 </div>
                             </form>
-                        </div>                          
-                            <div style="text-align: center" id="popupWinNote" class="modalwin">
-                                <h2> Please fill in all fields</h2>
-                                <form class="modalNote">
+                        </div>   
+                        <div>
+                            <form class="modalNote" style="text-align: center" id="popupWinNote" >
+                                    <h2> Please fill in all fields</h2>
                                     <div class="contactsNote">
-                                        <div class="fieldNote">
+                                        <div class="fieldsNote">
                                             <label class="labelNote">full name</label>
-                                            <input class="name" type="text" placeholder=" name">
+                                            <input id="nameNote" type="text" placeholder=" name" class="fieldNote">
                                         </div>
-                                        <div class="fieldNote">
+                                        <div class="fieldsNote">
                                         <label class="labelNote">e-mail</label>
-                                        <input class="email" type="email" placeholder=" email">
+                                        <input id="emailNote" type="email" placeholder=" email" class="fieldNote" pattern="[^ @]*@[^ @]*">
                                         </div>
-                                        <div class="fieldNote" class="labelNote">
-                                            <input id="datePicker" type="date">
+                                        <div class="fieldsNote" class="labelNote">
+                                            <input id="datePicker" type="date" class="fieldNote" >
                                         </div>
                                     </div>
                                     <div class="note" >
-                                        <div class="fieldNote">
+                                        <div class="fieldsNote">
                                             <label class="labelNote">header</label>
-                                            <input class="header" type="text" placeholder=" post header">
+                                            <input id="headerNote" class="headerNote fieldNote" type="text" placeholder=" post header">
                                         </div>
-                                        <div class="fieldNote">
+                                        <div class="fieldsNote">
                                             <label class="labelNote">your post</label>
-                                            <textarea class="yourPost" placeholder=" your post" width="100" height="200" border-radius: 10%;></textarea>
+                                            <textarea id="yourPost" class="fieldNote yourPost" placeholder=" your post" width="100" height="200" border-radius: 10%;></textarea>
                                         </div>
                                     </div>  
                                     <div class="imgAndButtonNote">
@@ -350,11 +350,11 @@ $query = mysqli_query($dbConnect, $querySelectAll) or die(mysql_error($dbConnect
                                             <img class="imgNote" src="https://img.freepik.com/free-icon/notes_318-878364.jpg?size=338&ext=jpg&ga=GA1.2.233289579.1666720782&semt=sph" alt="feedback">
                                         </div>    
                                         <div>
-                                        <button class="submit" type="submit" >Submit</button>
+                                            <button class="submitNote" type="button" >Submit</button>
                                         </div>
                                     </div>
-                                </form>
-                            </div>                
+                            </form>
+                        </div>                                       
                     </div>
                 </div>   
             </div>  

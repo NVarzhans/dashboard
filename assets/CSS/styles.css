@@ -844,10 +844,17 @@ li {
     width: max-content;
 }
 
+.imgAndButtonNote {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5vh;
+    justify-content: space-around;
+}
 
 .imgNote {
     box-shadow: 0px 0px 5px 0.5px #000000;
-    width: 70px;
+    width: 50px;
     margin-left: 20px;
 }
 
@@ -855,11 +862,11 @@ li {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 3vh;
     justify-content: flex-start;
 }
 
-.fieldNote {
+.fieldsNote {
     display: flex;
     flex-direction: row;
     margin: auto;
@@ -867,32 +874,35 @@ li {
 }
 
 .labelNote {
-    width: fit-content;
-    text-align: start;
     color: #0F79FC;
     font-weight: bold;
     border-radius: 5%;
     display: flex;
-    align-items: flex-start;
     margin-right: 5px;
     font-size: larger;
 }
 
 .yourPost {
-    height: 250px;
-    width: 600px;
+    height: 200px;
+    width: 500px;
     margin-top: 5vh;
 }
 
-.header {
-    width: 500px;
+.headerNote {
+    width: 400px;
+    margin-left: 3vw;
 
 }
 
-/*
-.modalwin h2 {
-    margin: 5px 0px 10px 0px;
-}*/
+.submitNote {
+    margin-top: 10px;
+    background-color: #E4C1F9;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width: 70px;
+    box-shadow: 0px 0px 5px 0.5px #000000;
+
+}
 
 .imgAndButton {
     display: flex;

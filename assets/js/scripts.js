@@ -1,7 +1,7 @@
 let darkLayer = document.createElement("div"); // вставка слоя затемнения
 let form = document.querySelector('#popupWin'); 
 
-let initialButton = document.querySelector(".subscribe");
+let initialButton = document.querySelector("#subscribe");
 initialButton.onclick = function() {
   darkLayer.id = 'shadow'; // id чтобы подхватить стиль
   document.body.appendChild(darkLayer); // включаем затемнение
@@ -56,22 +56,81 @@ submitButton.onclick = function (e) {
 
         errorsRemove();
 
-        formValidation();              
+        formValidation();   
+
+  e.target.close();
+
+
 }
 
 
-function showModalWinNote() {
+let formNote = document.querySelector('#popupWinNote');
+let darkLayerNote = document.createElement('div'); // вставка слоя затемнения 
 
-    let darkLayer = document.createElement('div'); // вставка слоя затемнения 
-    darkLayer.id = 'shadow'; // id чтобы подхватить стиль
-    document.body.appendChild(darkLayer); // включаем затемнение
+let postButton = document.querySelector('#postNote');
+postButton.onclick = function() {
+  darkLayerNote.id = 'shadow'; // id чтобы подхватить стиль
+  document.body.appendChild(darkLayerNote); // включаем затемнение
 
-    let modalWinNote = document.getElementById('popupWinNote'); // находим наше "окно" в index.html
-    modalWinNote.style.display = 'block'; // "включаем" его
+  formNote.style.display = 'block';  
+
+  darkLayerNote.onclick = function() {  // при клике на слой затемнения все исчезнет
+  darkLayerNote.parentNode.removeChild(darkLayerNote); // удаляем затемнение
+  formNote.style.display = 'none'; // делаем окно невидимым
+  return false;
+  }
+}
+
+let nameNote = formNote.querySelector('#nameNote');
+let emailNote= formNote.querySelector('#emailNote');
+let dateNote= formNote.querySelector('#datePicker');
+let headerNote= formNote.querySelector('#headerNote');
+let yourPost= formNote.querySelector('#yourPost');
+let fieldsNote = formNote.querySelectorAll('.fieldNote');
+let errorsNote = formNote.querySelectorAll('.error');
+
+function errorsNoteRemove() {
+        let errorsNote = formNote.querySelectorAll('.errorNote');
+        for (let i = 0; i < errorsNote.length; i++) {
+          errorsNote[i].remove();
+        }
+    }
+
+function formNoteValidation() {
+      
+      for (let i = 0; i < fieldsNote.length; i++) {
+            if (!fieldsNote[i].value) {
+              console.log('field is blank', fieldsNote[i]);
+                let errorNote = document.createElement('span');
+                errorNote.className = 'error';
+                errorNote.style.color = 'red';
+                errorNote.innerHTML = 'Cannot be blank';
+                formNote[i].parentElement.insertBefore(errorNote, fieldsNote[i]);
+            } else {
+              alert('Thanks ' + nameNote.value + ',' + ' your post was created');
+              formNote.reset();
+              formNote.style.display = 'none';
+              break;
+            }
+      }
+}
+
+let submitNoteButton = document.querySelector(".submitNote");
+submitNoteButton.onclick = function (e) {
+  e.preventDefault();
+
+        errorsNoteRemove();
+
+        formNoteValidation();  
   
-    darkLayer.onclick = function () {  // при клике на слой затемнения все исчезнет
-        darkLayer.parentNode.removeChild(darkLayer); // удаляем затемнение
-        modalWinNote.style.display = 'none'; // делаем окно невидимым
-        return false;
-    };
+  let obj = {
+    "fullName": nameNote,
+    "email": emailNote,
+    "date": dateNote,
+    "headerNote": headerNote,
+    "post": yourPost,
+  };
+  
+  let jsonString = JSON.stringify(obj);
+  console.log(jsonString);
 }
