@@ -57,7 +57,7 @@
                     <img class="line" src="./assets/pictures/cursiveline.png" alt="line"> <!--css-->
                     <span id="About">About</span> 
                 </div>
-                <div>
+                <div class="secondheader">
                     <h2 class="pageheader"><span class="bold">Develop</span> websites
                         <br>Develop <span class="bold">Myself</span>
                     </h2>

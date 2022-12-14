@@ -59,7 +59,8 @@ a.link:hover {
 @media screen and (max-width: 600px) {
     nav {
         margin: auto;
-        font-size: 100%;
+        font-size: 90%;
+        margin-left: 1%;
     }
 
     .mysitepage-background {
@@ -126,11 +127,17 @@ h1.mysite {
     }
 
     h1.mysite {
-        font-size: 150%;
-        margin: 1vh;
-
+        font-size: 200%;
+        margin: auto;
     }
 
+    .hello {
+        margin-bottom: 30px;
+    }
+
+    .first-page {
+        width: 80%;
+    }
 }
 
 .counter {
@@ -172,6 +179,20 @@ h2.pageheader {
     margin: 5vh 0px 5vh 5vw;
 }
 
+@media screen and (max-width: 600px) {
+    h2.pageheader {
+        font-size: 30px;
+        margin: 10%;
+    }
+
+    .countdetail {
+        font-size: 30px;
+    }
+
+    .countertechnologies {
+        justify-content: center;
+    }
+}
 /* img {
     margin-right: 1vw; 
     margin-left: 1vw; 
@@ -201,6 +222,18 @@ span {
     align-items: center;      
 }
 
+
+@media screen and (max-width: 600px) {
+    .signature {
+        flex-direction: column;   
+    }
+
+    .skills {
+        flex-direction: column-reverse;
+        margin: 0vh 5vw 0vh 5vw;
+    }
+}
+
 .sign_line {
     display: flex;
     width: 120px;
@@ -213,6 +246,12 @@ span {
     flex-direction: row;
     margin-top: 3%;
     margin-left: 10vw;    
+}
+
+@media screen and (max-width: 600px) {
+    .technologies {
+        margin-left: 5px;   
+    }
 }
 
 .altshu {
@@ -383,6 +422,32 @@ p.number {
     border-radius: 5px;
 }
   
+@media screen and (max-width: 600px) {
+    .projects {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vh;
+        margin-top: 5vh;
+        width: 70%;
+    }
+
+    .project{
+        width: 250px;
+        height: 150px;
+        background-color: #FCF6BD;
+        box-shadow: 0px 0px 10px 0.5px #000000;
+        border-radius: 5px;
+    }
+
+    p.protwo {
+        width: 200px;
+    }
+
+    .pro {
+        width: 200px;
+        margin: 5vh 5vw 5vh 5vw;
+    }
+}
 
 div.pro {
     display: flex;
@@ -471,12 +536,10 @@ div.serv {
 }
 
 .picture1 {
-    width: 15vw;
-    height: 20vh;
-    margin: auto;
+    width: 200px;
+    height: 150px;
     box-shadow: 0px 0px 10px 0.5px #000000;
     border-radius: 5px;
-
 }
 
 /* .picture1:hover {
@@ -504,6 +567,17 @@ div.articles {
     justify-content: flex-start;
 
 }    
+
+@media screen and (max-width: 600px) {
+    .article {
+        flex-direction: column;
+    }
+
+    .picture {
+        width: 120px;
+        height: 80px;
+    }
+}
 
 .story {
     display: flex;
@@ -590,6 +664,14 @@ footer {
     align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+    .picturecontacts {
+        display: flex;
+        flex-direction: column-reverse;
+        /* margin-left: 5% */
+    }
+}
+
 li {
     text-decoration: none;
     margin: 3%;
@@ -601,6 +683,12 @@ li {
     margin-left: 10%;
     width: 50%;
     justify-content: flex-start;
+}
+
+@media screen and (max-width: 600px) {
+    .contactssubscribe {
+        margin: auto;
+    }
 }
 
 .contacts {
@@ -903,10 +991,21 @@ footer {
     box-shadow: 0px 0px 10px 0.5px #000000;
 }
 
-/* .my-blog {
-    background-color: #FCF6BD;
-} */
+@media screen and (max-width: 600px) {
+    .imggroup {
+        width: 80%;
 
+        margin: 7%;
+    }   
+
+    .form {
+        margin: 0%;
+    }
+
+    .labelone {
+        text-align: center;
+    }
+}
 
 .news_text {
     overflow: hidden;  
