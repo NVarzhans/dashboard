@@ -24,14 +24,14 @@ let feedback = form.querySelector('#yourfeedback');
 let fields = form.querySelectorAll('.field');
 let errors = form.querySelectorAll('.error');
 
-function errorsRemove() {
+let errorsRemove = function() {
         let errors = form.querySelectorAll('.error');
         for (let i = 0; i < errors.length; i++) {
           errors[i].remove();
         }
     }
 
-function formValidation() {
+let formValidation = function() {
       
       for (let i = 0; i < fields.length; i++) {
             if (!fields[i].value) {
@@ -56,11 +56,7 @@ submitButton.onclick = function (e) {
 
         errorsRemove();
 
-        formValidation();   
-
-  e.target.close();
-
-
+        formValidation();  
 }
 
 
@@ -89,20 +85,20 @@ let yourPost= formNote.querySelector('#yourPost');
 let fieldsNote = formNote.querySelectorAll('.fieldNote');
 let errorsNote = formNote.querySelectorAll('.error');
 
-function errorsNoteRemove() {
+let errorsNoteRemove = function() {
         let errorsNote = formNote.querySelectorAll('.errorNote');
         for (let i = 0; i < errorsNote.length; i++) {
           errorsNote[i].remove();
         }
     }
 
-function formNoteValidation() {
+let formNoteValidation = function() {
       
       for (let i = 0; i < fieldsNote.length; i++) {
             if (!fieldsNote[i].value) {
               console.log('field is blank', fieldsNote[i]);
                 let errorNote = document.createElement('span');
-                errorNote.className = 'error';
+                errorNote.className = 'errorNote';
                 errorNote.style.color = 'red';
                 errorNote.innerHTML = 'Cannot be blank';
                 formNote[i].parentElement.insertBefore(errorNote, fieldsNote[i]);
@@ -124,11 +120,11 @@ submitNoteButton.onclick = function (e) {
         formNoteValidation();  
   
   let obj = {
-    "fullName": nameNote,
-    "email": emailNote,
-    "date": dateNote,
-    "headerNote": headerNote,
-    "post": yourPost,
+    "fullName": nameNote.value,
+    "email": emailNote.value,
+    "date": dateNote.value,
+    "headerNote": headerNote.value,
+    "post": yourPost.value,
   };
   
   let jsonString = JSON.stringify(obj);

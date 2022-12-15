@@ -60,13 +60,17 @@ a.link:hover {
     nav {
         margin: auto;
         font-size: 90%;
-        margin-left: 1%;
+        margin-left: 3%;
     }
 
     .mysitepage-background {
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+
+    .girl {
+        margin: 3%;
     }
 
 }
@@ -230,7 +234,7 @@ span {
 
     .skills {
         flex-direction: column-reverse;
-        margin: 0vh 5vw 0vh 5vw;
+        margin: 0vh 5vw 5vh 5vw;
     }
 }
 
@@ -369,6 +373,16 @@ p.number {
 
 }
 
+@media screen and (max-width: 600px) {
+    .buttoncontactme {
+        margin-top: 5px;
+    }
+
+    div.pro {
+        height: 0px;
+    }
+}
+
 .buttoncontactme:hover {
     background-color: #0F79FC;
     
@@ -445,7 +459,7 @@ p.number {
 
     .pro {
         width: 200px;
-        margin: 5vh 5vw 5vh 5vw;
+        /* margin: 5vh 5vw 5vh 5vw; */
     }
 }
 
@@ -469,7 +483,7 @@ p.pro {
 
 p.protwo {
     font-size: 14px;
-    width: 17vw;
+    /* width: 17vw; */
     margin-left: 1vw;
 }
 
@@ -485,6 +499,17 @@ div.pageheaderservices {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+    div.pageheaderservices {
+        display: block;
+      
+    }
+
+    img.servicon {
+        width: 50px;
+    }
 }
 
 .servicespage-background {
@@ -507,9 +532,12 @@ div.services {
 } 
 
 @media screen and (max-width: 600px) {
-    .services {
+    div.services {
         flex-direction: column;
+        width: 150%
     }
+
+
 }
 
 
@@ -557,6 +585,19 @@ div.articles {
 
 }
 
+@media screen and (max-width: 600px) {
+    div.articles {
+
+        margin-left: 5px;
+    }
+
+    .picture1 {
+        width: 120px;
+        height: 70px;
+        margin-left: 30px;
+    }
+}
+
 .article {
     display: flex;
     flex-direction: row;
@@ -573,9 +614,13 @@ div.articles {
         flex-direction: column;
     }
 
-    .picture {
-        width: 120px;
-        height: 80px;
+    .picture1 {
+        width: 110px;
+        height: px;
+    }
+
+    .story {
+        margin-left: 100px;
     }
 }
 
@@ -584,6 +629,7 @@ div.articles {
     flex-direction: column;
     width: 45vw;
     height: 20vh;
+    
   
      
 }
@@ -607,9 +653,14 @@ div.articles {
     flex-direction: row;
     /* width: 500px; */
     margin-left: 30vw;
-
-
 }
+
+@media screen and (max-width: 600px) {
+    .buttons {
+        margin-left: 0px;
+    }
+}
+
 
 .buttonthree {
     background-color: #E4C1F9;
@@ -1030,4 +1081,11 @@ footer {
     position: absolute;
     margin-left: 272px;
     margin-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .viewall {
+        margin-left: 10%
+    }
+    
 }
